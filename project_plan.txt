@@ -1,0 +1,33 @@
+Step 1: Propose and Scope the Project
+
+    - Simple web app that stores information (surveys)
+        - MEAN
+        - MongoDB
+    - Container lives in AWS under ECR
+    - Cluster lives in AWS under the EKS service 
+    - Cluster Pods:
+        - Jenkins
+        - Data (Mongo)
+            - Considerations:
+                - Statfulsets to allow for scaling without losing data
+        - Backend
+            - Considerations:
+                - Networking/Communication pipes between Frontend/Data pods
+        - Frontend
+            - Considerations:
+                - Networking/Communication pipes between Frontend/Data pods
+                - Views working as expected
+
+Step 2: Use Jenkins, and implement blue/green or rolling deployment.
+    - Jenkins to deploy
+    - Ansible to deploy cloudformation scripts / helm chart installs
+    - Host project container in ECR
+
+Step 3: Pick AWS Kubernetes as a Service, or build your own Kubernetes cluster.
+    - Use EKS
+
+Step 4: Build your pipeline
+
+
+Step 5: Test your pipeline
+
